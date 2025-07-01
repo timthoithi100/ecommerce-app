@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home - ShopHub{% endblock %}
+
+{% block content %}
+<div class="home-header">
+    <h1 class="home-title">Good evening, {{ current_user.name.split()[0] }}</h1>
+    <p class="home-subtitle">Discover your next favorite product</p>
+</div>
+
+<section class="featured-section">
+    <h2 style="color: #ffffff; font-size: 24px; margin-bottom: 16px;">Featured Products</h2>
+    <div class="products-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image">
+            <h3 class="product-name">{{ product.name }}</h3>
+            <p class="product-price">${{ "%.2f"|format(product.price) }}</p>
+            <p class="product-description">{{ product.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% if not products %}
+<div style="text-align: center; padding: 64px; color: #b3b3b3;">
+    <h3>No products available at the moment</h3>
+    <p>Check back later for amazing deals!</p>
+</div>
+{% endif %}
+{% endblock %}

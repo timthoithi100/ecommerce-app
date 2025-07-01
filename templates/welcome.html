@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to ShopHub{% endblock %}
+
+{% block content %}
+<div class="welcome-container">
+    <h1 class="welcome-title">ShopHub</h1>
+    <p class="welcome-subtitle">
+        Discover amazing products and enjoy a seamless shopping experience. 
+        Join thousands of satisfied customers who trust ShopHub for their shopping needs.
+    </p>
+    <div class="btn-group">
+        <a href="{{ url_for('signup') }}" class="btn btn-primary">Get Started</a>
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Log In</a>
+    </div>
+</div>
+{% endblock %}
