@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.pyo
+*.pyd
+*.db
+*.log
+*.pot
+*.pyc
+instance/
+.env
+.env.*
+
+# Django
+*.sqlite3
+media/
+staticfiles/
+
+# Flask
+instance/
+*.pyc
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React
+build/
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test/coverage
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Other
+*.bak
+*.swp
+*.tmp
+*.log
